@@ -5,6 +5,10 @@
     font-family: "Poppins", sans-serif;
 }
 
+body{
+   background: linear-gradient(90deg, #002f6c, #d50000); 
+}
+
 .container {
     background: linear-gradient(90deg, #002f6c, #d50000);
     height: 100vh, auto;
