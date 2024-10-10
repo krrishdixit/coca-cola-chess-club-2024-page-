@@ -8,12 +8,13 @@
 .container {
     background: linear-gradient(90deg, #002f6c, #d50000);
     height: 100vh, auto;
+    max-height: 1100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    padding: 90px 0 10px 0;
+    padding: 90px 0 20px 0;
 }
 
 .wrapper {
@@ -267,6 +268,12 @@
     .content-1 img {
         display: none;
     }
+    .wrapper, .wrapper-1{
+        height: auto;
+    }
+    .wrapper-1{
+        padding-bottom: 30px;
+    }
 }
 
 @media screen and (min-width: 1600px) {
@@ -296,7 +303,7 @@
 
 @media screen and (max-width: 500px){
     .container{
-        padding: 70px 0 20px 0;
+        padding: 60px 0 20px 0;
     }
     .wrapper-1{
         padding: 40px 0 0 0;
