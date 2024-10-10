@@ -7,17 +7,18 @@
 
 .container {
     background: linear-gradient(90deg, #002f6c, #d50000);
-    height: 100vh;
+    height: 100vh, auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    /* padding: 10px 0; */
+    padding: 90px 0 10px 0;
 }
 
 .wrapper {
     /* background: #f2fff2; */
-    width: 90%;
+    width: 96%;
     height: 94vh;
 }
 
@@ -27,6 +28,8 @@
     display: flex;
     justify-content: space-between;
     padding: 0 10px;
+    position: fixed;
+    top: 0;
 }
 
 .navbar img {
@@ -53,7 +56,7 @@
     position: relative;
 }
 
-.navbar ul li a::before{
+.navbar ul li a::before {
     content: "";
     position: absolute;
     bottom: -10px;
@@ -64,7 +67,7 @@
     transition: 0.5s ease-in-out;
 }
 
-.navbar ul li a:hover::before{
+.navbar ul li a:hover::before {
     width: 100%;
 }
 
@@ -74,18 +77,20 @@
 }
 
 .content img {
-    width: 38vw;
-    margin-left: -20px;
+    width: 40vw;
+    padding: 0 0 0 20px;
+    margin-left: 0px;
 }
 
 .text-content {
     display: flex;
     justify-content: center;
-    padding: 40px 30px;
-    align-items: flex-start; 
+    padding: 26px 70px 0 30px;
+    /* top right bottom left */
+    align-items: flex-start;
     flex-direction: column;
     gap: 10px;
-    margin-left: 40px;
+    /* margin-left: 40px; */
 }
 
 .text-content h3 {
@@ -94,24 +99,27 @@
     text-transform: uppercase;
     letter-spacing: 3px
 }
-.text-content h1{
+
+.text-content h1 {
     font-size: 50px;
     color: #f2f2f2;
 }
 
-.text-content p{
+.text-content p {
     color: white;
     line-height: 25px;
     text-transform: capitalize;
 }
-.hastag span{
+
+.hastag span {
     color: #f2f2f2;
     font-size: 18px;
     font-weight: bold;
     margin-right: 10px;
     text-decoration: underline;
 }
-.text-content button{
+
+.text-content button {
     padding: 15px 25px;
     margin-top: 10px;
     border-radius: 20px;
@@ -119,12 +127,14 @@
     background: linear-gradient(90deg, #d50000, #002f6c);
     color: #f2f2f2;
     font-weight: bold;
+    cursor: pointer;
 }
-.text-content button{
+
+.text-content button {
     display: none;
 }
 
-.text-content .order-btn{
+.text-content .order-btn {
     display: block;
     padding: 15px 25px;
     margin-top: 15px;
@@ -133,35 +143,159 @@
     background: linear-gradient(90deg, #d50000, #002f6c);
     color: #f2f2f2;
     font-weight: bold;
+    cursor: pointer;
 }
 
-@media screen and (max-width: 819px){
-    .text-content{
-        padding-left: 1px;
+.wrapper-1 {
+    /* background: #f2f2f2; */
+    width: 96%;
+    height: 94vh;
+    margin-top: 26px;
+    padding: 60px 0;
+}
+
+.content-1 {
+    display: flex;
+}
+
+.content-1 img {
+    width: 40vw;
+    height: 60vh;
+    margin-right: 160px;
+    margin-top: 40px;
+}
+
+.text-content-1 {
+    display: flex;
+    justify-content: center;
+    /* top right bottom left */
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 210px 0 60px;
+}
+
+.text-content-1 h3 {
+    color: rgb(73, 73, 73);
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px
+}
+
+.text-content-1 h1 {
+    font-size: 50px;
+    color: #f2f2f2;
+}
+
+.text-content-1 p {
+    color: white;
+    line-height: 25px;
+    text-transform: capitalize;
+}
+
+.text-content-1 button {
+    padding: 15px 25px;
+    margin-top: 10px;
+    border-radius: 20px;
+    border: none;
+    background: linear-gradient(90deg, #d50000, #002f6c);
+    color: #f2f2f2;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.text-content-1 button {
+    display: none;
+}
+
+.text-content-1 .order-btn-1 {
+    display: block;
+    padding: 15px 25px;
+    margin-top: 15px;
+    border-radius: 26px;
+    border: none;
+    background: linear-gradient(90deg, #002f6c, #d50000);
+    color: #f2f2f2;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 819px) {
+
+    .text-content,
+    .text-content-1 {
+        padding: 40px 26px 40px 26px;
     }
-    .container{
-        height: 100vh;
+
+    .container {
+        height: 100vh auto;
     }
-    .text-content h1{
+
+    .text-content h1,
+    .text-content-1 h1 {
         font-size: 40px;
         color: #f2f2f2;
     }
-    .text-content p{
+
+    .text-content p,
+    .text-content-1 p {
         font-size: 16px;
     }
 }
 
-@media screen and (max-width: 787px){
-    .text-content button{
+@media screen and (max-width: 787px) {
+
+    .text-content button,
+    .text-content-1 button {
         display: block;
     }
-    .text-content .order-btn{
+
+    .text-content .order-btn,
+    .text-content-1 .order-btn-1 {
         display: none;
     }
-    .text-content h1{
+
+    .text-content h1,
+    .text-content-1 h1 {
         font-size: 36px;
     }
-    .content img{
+
+    .content img,
+    .content-1 img {
         display: none;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .text-content h3 {
+        font-size: 40px;
+    }
+
+    .text-content h1 {
+        font-size: 76px;
+    }
+
+    .hastag span {
+        font-size: 28px;
+    }
+
+    .text-content p {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    .text-content .order-btn {
+        padding: 20px 35px;
+        border-radius: 30px;
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .container{
+        padding: 70px 0 20px 0;
+    }
+    .wrapper-1{
+        padding: 30px 0 0 0;
     }
 }
